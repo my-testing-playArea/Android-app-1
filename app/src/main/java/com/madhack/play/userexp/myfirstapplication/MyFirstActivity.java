@@ -63,14 +63,12 @@ public class MyFirstActivity extends Activity {
                     try {
                         Response response = client.newCall(request).execute();
                         String responseText = response.body().string();
-                        Log.i(LOG_TAG, responseText);
                         JSONObject responseJson = new JSONObject(responseText);
                         JSONObject data = responseJson.getJSONObject("data");
                         JSONArray translations = data.getJSONArray("translations");
                         JSONObject translation = translations.getJSONObject(0);
                         String translatedText = translation.getString("translatedText");
 
-                        Log.i("translatedText", translatedText);
 
 
                         handler.post(new Runnable() {
