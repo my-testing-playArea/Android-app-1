@@ -22,6 +22,7 @@ public class MyFirstActivity extends Activity {
         btnTranslate.setText("Translate");
         btnTranslate.setOnClickListener(v -> {
             String text = etInputText.getText().toString();
+
             tvTranslatedText.setText(text);
 
         });
