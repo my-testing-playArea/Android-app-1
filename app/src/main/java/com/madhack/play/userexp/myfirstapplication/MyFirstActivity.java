@@ -33,6 +33,7 @@ public class MyFirstActivity extends Activity {
         Button btnTranslate = findViewById(R.id.btn_translate);
         TextView tvTranslatedText = findViewById(R.id.my_layout_text_view);
         EditText etInputText = findViewById(R.id.my_layout_et_text);
+        Handler handler = new Handler();
 
         btnTranslate.setText("Translate");
         btnTranslate.setOnClickListener(v -> {
@@ -72,7 +73,7 @@ public class MyFirstActivity extends Activity {
                         Log.i("translatedText", translatedText);
 
 
-                        new Handler().post(new Runnable() {
+                        handler.post(new Runnable() {
                             @Override
                             public void run() {
                                 tvTranslatedText.setText(translatedText);
