@@ -1,1 +1,1 @@
-#Simple Android App made for learning purposes.
+# Simple Android App made for learning purposes.
